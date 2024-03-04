@@ -1,0 +1,8 @@
+#timeline {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 650px) {
+        display: block;
+    }
+}
