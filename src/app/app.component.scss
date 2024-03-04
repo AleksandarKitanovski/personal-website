@@ -1,0 +1,50 @@
+nav {
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    @media (max-width: 650px) {
+        height: 100px;        
+    }
+}
+
+li {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    padding: 0.9em;
+
+    &:hover {
+        background-color: greenyellow;
+        color: black;
+    }
+}
+
+.content {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 650px) {
+        padding-top: 100px;
+        display: block;
+    }
+}
+
+#name {
+    font-weight: bold;
+}
