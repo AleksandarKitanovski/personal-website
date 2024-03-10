@@ -26,16 +26,17 @@ ul {
 
 a {
     text-decoration: none;
+    color: white;
     display: inline-block;
     padding: 0.9em;
 
+    &:visited {
+        color: inherit;
+    }
+    
     &:hover {
         background-color: greenyellow;
         color: black;
-    }
-
-    &:visited {
-        color: inherit;
     }
 }
 

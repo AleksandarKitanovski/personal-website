@@ -1,23 +1,13 @@
 article {
-    height: 100vh;
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-
-    @media (max-width: 1300px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    @media (max-width: 1050px) {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3, 1fr);
-        
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 1em;
 }
 
 h1 {
+    font-size: 1.5em;
     text-align: center;
     color: lightseagreen;
 }
@@ -44,14 +34,13 @@ a {
 }
 
 .card {
-    width: 80%;
+    width: 30em;
     height: 400px;
     padding: 2em; 
     margin: auto;
-    margin-top: 10px;
 
-    // box-shadow: 5px 5px white;
-    border-radius: 1em;
+    box-shadow: 0.3em 0.3em lightblue;
+    border-radius: 15px;
 
     background-color: black;
     color: white;
