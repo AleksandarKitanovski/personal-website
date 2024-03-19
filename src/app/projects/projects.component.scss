@@ -8,7 +8,7 @@ article {
 
 section {
     width: 35em;
-    height: 700px;
+    height: 650px;
     overflow: auto;
 
     text-align: justify;
@@ -20,14 +20,14 @@ section {
 
     background-color: black;
     color: white;
-    box-shadow: lightblue 0.3em 0.3em;
+    box-shadow: lightblue 0.3em 0.3em 0.3em 0.3em;
 }
 
 
 h1 {
     font-size: 1.5em;
     text-align: center;
-    color: lightseagreen;
+    color: #B1DDF1;
 }
 
 h2 {
@@ -48,13 +48,13 @@ a {
     }
 
     &:hover {
-        background-color: white;
+        background-color: #B1DDF1;
         color: black;
     }
 }
 
 .paper {
-    color: lightseagreen !important;
+    color: #B1DDF1 !important;
 
     &:visited {
         color: inherit;
@@ -62,7 +62,7 @@ a {
     }
 
     &:hover {
-        color: seagreen !important;
+        color: #50C878 !important;
         background-color: black;
     }
 }

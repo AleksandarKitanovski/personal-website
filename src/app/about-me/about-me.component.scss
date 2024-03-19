@@ -1,7 +1,7 @@
 article {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 25px;
     justify-content: space-between;
     padding: 1em;
 }
@@ -9,7 +9,7 @@ article {
 h1 {
     font-size: 1.5em;
     text-align: center;
-    color: lightseagreen;
+    color: #B1DDF1;
 }
 
 p {
@@ -22,10 +22,10 @@ li {
 
 a {
     text-decoration: none;
-    color: lightseagreen;
+    color: #B1DDF1;
 
     &:hover {
-        color: seagreen;
+        color: #50C878;
     }
 
     &:visited {
@@ -39,7 +39,7 @@ a {
     padding: 2em; 
     margin: auto;
 
-    box-shadow: 0.3em 0.3em lightblue;
+    box-shadow: 0.3em 0.3em 0.3em 0.3em lightblue;
     border-radius: 15px;
 
     background-color: black;

@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { LandingPageComponent } from "./app/landing-page/landing-page.component";
 import { AboutMeComponent } from "./app/about-me/about-me.component";
 import { ProjectsComponent } from "./app/projects/projects.component";
+import { TechnologiesComponent } from "./app/technologies/technologies.component";
 
 const routeConfig: Routes = [
     {
@@ -18,6 +19,11 @@ const routeConfig: Routes = [
         path: 'projects',
         component: ProjectsComponent,
         title: 'Projects'
+    },
+    {
+        path: 'technologies',
+        component: TechnologiesComponent,
+        title: 'Technologies'
     }
 ]
 

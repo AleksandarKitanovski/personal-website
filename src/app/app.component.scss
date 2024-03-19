@@ -2,7 +2,7 @@ nav {
     display: inline-flex;
     justify-content: space-between;
     background-color: black;
-    color: white;
+    color: #B1DDF1;
     position: fixed;
     overflow: hidden;
     left: 0;
@@ -26,16 +26,16 @@ ul {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #B1DDF1;
     display: inline-block;
-    padding: 0.9em;
+    padding: 1em;
 
     &:visited {
         color: inherit;
     }
     
     &:hover {
-        background-color: greenyellow;
+        background-color:#50C878;
         color: black;
     }
 }
