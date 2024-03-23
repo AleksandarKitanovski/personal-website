@@ -149,8 +149,9 @@ export class SkillsComponent {
           title: {
             display: true,
             text: label,
+            color: 'orangered',
             font: {
-              size: 17
+              size: 17,
             }
           },
           legend: {

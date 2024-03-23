@@ -1,4 +1,4 @@
-article {
+.container {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
@@ -6,40 +6,12 @@ article {
     padding: 1em;
 }
 
-section {
-    // width: auto;
-    // height: auto;
-    // overflow: auto;
-
-    // text-align: justify;
-
-    // border-radius: 15px;
-
+.card {
+    width: 30em;
+    height: 330px;
     margin: auto;
-    // padding: 1em;
-}
+    padding: 2em;
 
-
-h1 {
-    font-size: 1.5em;
-}
-
-h2 {
-    font-size: 1.1em;
-}
-
-h3 {
-    font-size: 1em;
-}
-
-.bar {
-    background-color: black;
-    padding: 10px;
-    border-radius: 10px;
     box-shadow: lightblue 5px 5px 5px 5px;
-}
-
-.bar-title {
-    text-anchor: middle;
-    font-size: 1.7em;
+    border-radius: 15px;
 }

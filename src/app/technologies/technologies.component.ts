@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import * as d3 from 'd3';
+import { Chart } from 'chart.js/auto';
 
 @Component({
   selector: 'app-technologies',
@@ -9,185 +9,133 @@ import * as d3 from 'd3';
   styleUrl: './technologies.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class TechnologiesComponent implements OnInit{
-  private p_langs = [
-    {
-      'name': 'Python',
-      'skill': 10
-    },
-    {
-      'name': 'JavaScript',
-      'skill': 7
-    },
-    {
-      'name': 'Java',
-      'skill': 5
-    },
-    {
-      'name': 'C/C++',
-      'skill': 4
-    },
-    {
-      'name': 'Clojure',
-      'skill': 3
-    },
-    {
-      'name': 'Prolog',
-      'skill': 2
-    }
-  ];
+export class TechnologiesComponent implements OnInit {
+  private p_langs = {
+    labels: ['Python', 'JavaScript', 'Java', 
+             'C/C++', 'Clojure', 'Prolog'],
+    datasets: [{
+      data: [9, 7, 5, 4, 3, 2],
+      backgroundColor: [
+        'rgba(55, 118, 170, 0.7)',
+        'rgba(250, 215, 61, 0.7)',
+        'rgba(243, 67, 54, 0.7)',
+        'rgba(0, 87, 153, 0.7)',
+        'rgba(95, 172, 49, 0.7)',
+        'rgba(244, 137, 45, 0.7)'
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private bi_tools = [
-    {
-      'name': 'Tableau',
-      'skill': 8
-    },
-    {
-      'name': 'PowerBI',
-      'skill': 5
-    },
-    {
-      'name': 'Apache Superset',
-      'skill': 3
-    }
-  ];
+  private bi_tools = {
+    labels: ['Tableau', 'PowerBI', 'Apache Superset'],
+    datasets: [{
+      data: [8, 5, 3],
+      backgroundColor: [
+        'rgba(31, 68, 126, 0.7)',
+        'rgba(252, 199, 2, 0.7)',
+        'rgba(3, 204, 191, 0.7)',
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private dbs = [
-    {
-      'name': 'Transact SQL',
-      'skill': 9
-    },
-    {
-      'name': 'PostgreSQL',
-      'skill': 8
-    },
-    {
-      'name': 'MariaDB',
-      'skill': 8
-    },
-    {
-      'name': 'MongoDB',
-      'skill': 7
-    },
-    {
-      'name': 'ChromaDB',
-      'skill': 6
-    },
-    {
-      'name': 'Neo4j',
-      'skill': 5
-    },
-    {
-      'name': 'Cassandra',
-      'skill': 2
-    }
-  ];
+  private dbs = {
+    labels: ['Transact-SQL', 'PostgreSQL', 'MariaDB',
+      'MongoDB', 'ChromaDB', 'Neo4j', 'Cassandra'],
+    datasets: [{
+      data: [9, 8, 8, 7, 6, 5, 2],
+      backgroundColor: [
+        'rgba(227, 31, 35, 0.7)',
+        'rgba(49, 99, 141, 0.7)',
+        'rgba(192, 118, 90, 0.7)',
+        'rgba(77, 163, 74, 0.7)',
+        'rgba(249, 217, 44, 0.7)',
+        'rgba(1, 64, 125, 0.7)',
+        'rgba(187, 230, 251, 0.7)'
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private data_tools = [
-    {
-      'name': 'Mage AI', 
-      'skill': 6
-    },
-    {
-      'name': 'Apache Airflow',
-      'skill': 5
-    },
-    {
-      'name': 'Apache Spark',
-      'skill': 4
-    },
-    {
-      'name': 'Apache Flink',
-      'skill': 3
-    }
-  ];
+  private data_tools = {
+    labels: ['Mage AI', 'Apache Airflow', 'Apache Spark', 'Apache Flink'],
+    datasets: [{
+      data: [6, 5, 4, 3],
+      backgroundColor: [
+        'rgba(162, 122, 254, 0.7)',
+        'rgba(4, 214, 89, 0.7)',
+        'rgba(255, 83, 25, 0.7)',
+        'rgba(230, 82, 112, 0.7)'
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private dev_tools = [
-    {
-      'name': 'Git',
-      'skill': 7
-    },
-    {
-      'name': 'Docker',
-      'skill': 5
-    },
-    {
-      'name': 'Bash',
-      'skill': 4
-    },
-    {
-      'name': 'Powershell',
-      'skill': 3
-    },
-    {
-      'name': 'Kubernetes',
-      'skill': 2
-    }
-  ];
+  private dev_tools = {
+    labels: ['Git', 'Docker', 'Bash', 'Powershell', 'Kubernetes'],
+    datasets: [{
+      data: [7, 5, 4, 3, 2],
+      backgroundColor: [
+        'rgba(240, 81, 51, 0.7)',
+        'rgba(0, 146, 230, 0.7)',
+        'rgba(34, 221, 38, 0.7)',
+        'rgba(1, 36, 86, 0.7)',
+        'rgba(51, 110, 228, 0.7)'
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private cloud = [
-    {
-      'name': 'Microsoft Azure',
-      'skill': 4
-    },
-    {
-      'name': 'GCP',
-      'skill': 2
-    },
-    {
-      'name': 'AWS',
-      'skill': 1
-    }
-  ]
+  private cloud = {
+    labels: ['MS Azure', 'GCP', 'AWS'],
+    datasets: [{
+      data: [4, 2, 1],
+      backgroundColor: [
+        'rgba(58, 198, 242, 0.7)',
+        'rgba(234, 67, 53, 0.7)',
+        'rgba(255, 154, 0, 0.7)',
+      ],
+      borderWidth: 1
+    }]
+  };
 
-  private createBar(id: string, 
-                    data: {name: string, skill: number}[],
-                    title: string) {
-    const width = 500;
-    const height = 350;
 
-    const scale = width / 10;
-    const bar_height = (height - 20) / (data.length * 1.5);
-    const bar_distance = (height - 40) / data.length;
-    const bar_padding_top = 50;
-    const text_padding_top = 55 + bar_height / 2; // extra 5 because text is anchored at the bottom
+  private createBar(id: string, data: any, label: string) {
+    const canvas: HTMLCanvasElement = document.getElementById(id)!
+      .appendChild(document.createElement('canvas'));
 
-    // Define the chart
-    const bar = d3.select(`#${id}`)
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height)
-      .attr('class', 'bar');
+    canvas.style['margin'] = 'auto';
+    canvas.style['width'] = '450px';
+    canvas.style['height'] = '350px';
 
-    // Add the bars
-    bar.selectAll('rect')
-      .data(data)
-      .enter()
-      .append('rect')
-      .attr('x', 0)
-      .attr('y', (d, i) => i * bar_distance + bar_padding_top)
-      .attr('width', d => d.skill * scale)
-      .attr('height', bar_height)
-      .attr('fill', '#50C878')
-    
-    // Add the labels
-    bar.selectAll('text')
-      .data(data)
-      .enter()
-      .append('text')
-      .attr('fill', 'black')
-      .attr('x', 10)
-      .attr('y', (d, i) => i * bar_distance + text_padding_top)
-      .text(d => d.name)
-      .style('font-weight', 'bolder');
-
-    // Add the title
-    bar.append('text')
-       .text(title)
-       .attr("transform", "translate(250, 30)")
-       .attr('fill', '#B1DDF1')
-       .attr('class', 'bar-title')
-  }
+    new Chart(canvas, {
+      type: 'bar',
+      data: data,
+      options: {
+        indexAxis: 'y',
+        plugins: {
+          title: {
+            display: true,
+            text: label,
+            color: 'orangered',
+            font: {
+              size: 17
+            }
+          },
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 10
+          }
+        }
+      }
+    });
+  };
 
   ngOnInit(): void {
     this.createBar('langs', this.p_langs, 'Programming Languages');

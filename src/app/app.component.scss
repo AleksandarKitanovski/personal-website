@@ -1,14 +1,15 @@
 nav {
     display: inline-flex;
     justify-content: space-between;
-    background-color: black;
-    color: #B1DDF1;
+    background-color: #3C887E;
+    color: white;
     position: fixed;
     overflow: hidden;
     left: 0;
     right: 0;
     top: 0;
     height: 50px;
+    font-weight: bolder;
     @media (max-width: 650px) {
         height: 100px;        
     }
@@ -26,7 +27,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #B1DDF1;
+    color: white;
     display: inline-block;
     padding: 1em;
 
@@ -35,8 +36,8 @@ a {
     }
     
     &:hover {
-        background-color:#50C878;
-        color: black;
+        background-color: orangered;
+        color: white;
     }
 }
 
@@ -45,8 +46,4 @@ a {
     @media (max-width: 650px) {
         padding-top: 100px;
     }
-}
-
-#name {
-    font-weight: bold;
 }

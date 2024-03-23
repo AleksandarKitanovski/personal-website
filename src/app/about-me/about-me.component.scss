@@ -1,15 +1,25 @@
-article {
+.container {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 2em;
     justify-content: space-between;
     padding: 1em;
+}
+
+.card {
+    width: 30em;
+    height: 330px;
+    padding: 2em; 
+    margin: auto;
+
+    box-shadow: lightblue 5px 5px 5px 5px;
+    border-radius: 15px;
 }
 
 h1 {
     font-size: 1.5em;
     text-align: center;
-    color: #B1DDF1;
+    color: orangered;
 }
 
 p {
@@ -20,28 +30,16 @@ li {
     margin-bottom: 25px;
 }
 
-a {
+.link {
     text-decoration: none;
-    color: #B1DDF1;
+    color: orangered;
+    font-weight: bolder;
 
     &:hover {
-        color: #50C878;
+        color: orange;
     }
 
     &:visited {
         text-decoration: inherit;
     }
-}
-
-.card {
-    width: 30em;
-    height: 400px;
-    padding: 2em; 
-    margin: auto;
-
-    box-shadow: 0.3em 0.3em 0.3em 0.3em lightblue;
-    border-radius: 15px;
-
-    background-color: black;
-    color: white;
 }
