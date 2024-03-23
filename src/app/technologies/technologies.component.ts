@@ -10,7 +10,7 @@ import { Chart } from 'chart.js/auto';
   encapsulation: ViewEncapsulation.None
 })
 export class TechnologiesComponent implements OnInit {
-  private p_langs = {
+  private programmingLangs = {
     labels: ['Python', 'JavaScript', 'Java', 
              'C/C++', 'Clojure', 'Prolog'],
     datasets: [{
@@ -27,7 +27,7 @@ export class TechnologiesComponent implements OnInit {
     }]
   };
 
-  private bi_tools = {
+  private biTools = {
     labels: ['Tableau', 'PowerBI', 'Apache Superset'],
     datasets: [{
       data: [8, 5, 3],
@@ -58,7 +58,7 @@ export class TechnologiesComponent implements OnInit {
     }]
   };
 
-  private data_tools = {
+  private dataTools = {
     labels: ['Mage AI', 'Apache Airflow', 'Apache Spark', 'Apache Flink'],
     datasets: [{
       data: [6, 5, 4, 3],
@@ -72,7 +72,7 @@ export class TechnologiesComponent implements OnInit {
     }]
   };
 
-  private dev_tools = {
+  private devTools = {
     labels: ['Git', 'Docker', 'Bash', 'Powershell', 'Kubernetes'],
     datasets: [{
       data: [7, 5, 4, 3, 2],
@@ -138,11 +138,11 @@ export class TechnologiesComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.createBar('langs', this.p_langs, 'Programming Languages');
-    this.createBar('bi-tools', this.bi_tools, 'BI Tools');
+    this.createBar('langs', this.programmingLangs, 'Programming Languages');
+    this.createBar('bi-tools', this.biTools, 'BI Tools');
     this.createBar('dbs', this.dbs, 'Databases');
-    this.createBar('data-tools', this.data_tools, 'Data Engineering Tools');
+    this.createBar('data-tools', this.dataTools, 'Data Engineering Tools');
     this.createBar('cloud', this.cloud, 'Cloud Providers');
-    this.createBar('dev-tools', this.dev_tools, 'DevOps Tools');
+    this.createBar('dev-tools', this.devTools, 'DevOps Tools');
   }
 }

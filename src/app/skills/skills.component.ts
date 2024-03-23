@@ -113,7 +113,7 @@ export class SkillsComponent {
     }]
   };
 
-  private soft_skills = {
+  private softSkills = {
     labels: [
       'Communication',
       'Team-work',
@@ -180,6 +180,6 @@ export class SkillsComponent {
     this.createRadarChart('math', this.math, 'Mathematics');
     this.createRadarChart('software', this.software, 'Software Engineering / Computer Science');
     this.createRadarChart('devops', this.devops, 'DevOps & SysAdmin');
-    this.createRadarChart('soft-skills', this.soft_skills, 'Soft Skills');
+    this.createRadarChart('soft-skills', this.softSkills, 'Soft Skills');
   }
 }

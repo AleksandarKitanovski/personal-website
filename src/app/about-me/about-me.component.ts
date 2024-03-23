@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-
+  writeToClipboard() {
+    navigator.clipboard.writeText('kitanovski.aleksandar@yahoo.com');
+    alert('Mail Copied!');
+  }
 }
