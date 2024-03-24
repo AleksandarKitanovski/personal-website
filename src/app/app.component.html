@@ -1,11 +1,11 @@
 <main>
-    <nav>
+    <nav id="navigation">
         <div>
             <ul>
                 <li><a [routerLink]="['/']">Aleksandar Kitanovski</a></li>
             </ul>
         </div>
-        <div>
+        <div id="links">
             <ul>
                 <li><a [routerLink]="['skills']">Skills</a></li>
                 <li><a [routerLink]="['technologies']">Technologies</a></li>
@@ -13,8 +13,9 @@
                 <li><a [routerLink]="['about-me']">About Me</a></li>
             </ul>
         </div>
+        <a class="icon" (click)="toggle()"><i class="fa fa-bars"></i></a>
     </nav>
-    <section class="content">
+    <section id="content">
         <router-outlet></router-outlet>
     </section>
 </main>

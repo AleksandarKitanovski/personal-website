@@ -7,8 +7,8 @@
 }
 
 .card {
-    width: 30em;
-    height: 330px;
+    width: 500px;
+    height: 310px;
     margin: auto;
     padding: 2em;
 
@@ -16,4 +16,8 @@
     border-radius: 15px;
     
     overflow: auto;
+
+    @media (max-width: 500px) {
+        height: auto;
+    }
 }

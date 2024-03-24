@@ -1,5 +1,5 @@
-nav {
-    display: inline-flex;
+#navigation {
+    display: flex;
     justify-content: space-between;
     background-color: #247BA0;
     color: white;
@@ -10,8 +10,10 @@ nav {
     top: 0;
     height: 50px;
     font-weight: bolder;
-    @media (max-width: 650px) {
-        height: 100px;        
+
+    @media (min-width: 600px) {
+       height: 50px !important; 
+       flex-direction: row !important;
     }
 }
 
@@ -41,9 +43,28 @@ a {
     }
 }
 
-.content {
+#links {
+    @media (max-width: 600px) {
+        display: none;
+    }
+    @media (min-width: 600px) {
+        display: inline-block !important;
+    }
+}
+
+.icon {
+    display: none;
+
+    @media (max-width: 600px) {
+        display: inline;
+    }
+}
+
+#content {
     padding-top: 50px;
-    @media (max-width: 650px) {
-        padding-top: 100px;
+
+    @media (min-width: 600px) {
+        padding-top: 50px !important;;
+        
     }
 }
